@@ -1,0 +1,44 @@
+<br><br><div class="container text-center">
+    <h3 style="color: rgb(95, 247, 103); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Luxury Kerala Apartments</h3>
+    <p style="color:rgb(8, 8, 8)">Luxury Kerala Villas is the one and only company providing Self – catering Holiday Villas / Apartments in Kerala. All of our villas/apartments are managed by us. All of our villas/apartment is Government approved and the approval is granted by Homestay Classification Committee, Department of Tourism, Government of Kerala.
+
+                      Kerala is famed for its warm and welcoming people and for its beautiful beaches, lush backwaters, enticing cuisine and languid pace of life but the forested hills and narrow waterways can also be enjoyed by those seeking some gently activity</p>
+
+</div><br><br><br>
+<div class="container text-center">
+    <h3 style="color: rgb(95, 247, 103); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        Self Catered Apartments
+    </h3>
+    <h6 style="color:gray">Discover our range of beautiful villas with their own private pools.
+ 
+        Choose a Holiday Villa That Meets Your Expections</h6>
+        <hr>
+    
+</div>
+
+<main>
+     <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;"> 
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 ">
+            
+             
+                      <div class=" col-m-2" *ngFor="let x of items">
+                         <div class="card h-100 shadow-sm"> 
+                            <img src="{{x.image}}" class="card-img-top" alt="..."> <div class="label-top shadow-sm">Asus Rog</div> <div class="card-body"> <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">12354.00&euro;</span> <span class="float-end">
+                                <a href="#" class="small text-muted">Reviews</a>
+                            </span> </div> 
+                            <h5 class="card-title">{{x.name}}</h5> <div class="text-center my-4"> 
+                                <p>{{x.description}}</p>
+                                <a (click)="gotohere(x.id)" class="btn btn-success">More Details</a>
+                            </div> <br>
+                            <div class="clearfix mb-1">
+                                 <span class="float-start">
+                                    <i class="far fa-question-circle"></i>
+                                </span> 
+                                <span class="float-end">
+                                    <i class="fas fa-plus"></i>
+                                </span>
+                                <br><br><br>
+                             </div> </div> 
+                            </div> 
+                        </div>  </div> </div></main>
+

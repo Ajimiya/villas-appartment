@@ -1,0 +1,43 @@
+<body background="">
+    <br><br><div class="container text-center">
+        <h3 style="color:rgb(0, 255, 115); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Luxury Kerala Villas</h3>
+        <p style="color: gray"><b>Luxury Kerala Villas is the one and only company providing Self – catering Holiday Villas / Apartments in Kerala. All of our villas/apartments are managed by us. All of our villas/apartment is Government approved and the approval is granted by Homestay Classification Committee, Department of Tourism, Government of Kerala.
+    
+                          Kerala is famed for its warm and welcoming people and for its beautiful beaches, lush backwaters, enticing cuisine and languid pace of life but the forested hills and narrow waterways can also be enjoyed by those seeking some gently activity </b></p>
+                       </div><br><br><br>
+    <div class="container text-center">
+        <h3 style="color:rgb(0, 255, 115); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            Self Catered Villas
+        </h3>
+        <h6 style="color:gray">Discover our range of beautiful villas with their own private pools.
+     
+            Choose a Holiday Villa That Meets Your Expections</h6>
+        
+    </div>
+    </body>
+    
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col" *ngFor="let i of items">
+                <div class="card " style="width: 28rem;">
+                    <img class="card-img-top" src="{{i.image}}" alt="Card image cap"height="250px">
+                    <div class="card-body">
+                      <h5 class="card-title">{{i.name}}</h5>
+                      <p class="card-text">{{i.description}}</p>
+      
+                      <a style="background-color: rgb(24, 165, 24);"(click)="gotoHere(i.id)" class="btn btn-dark">More</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+    
+    
+    
+

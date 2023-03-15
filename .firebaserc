@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "luxury-apartment-a472f": {
+      "hosting": {
+        "luxury_villas": [
+          "luxury-apartment-a472f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "luxury-apartment-a472f"
+  }
+}
