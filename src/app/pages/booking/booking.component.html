@@ -1,3 +1,4 @@
+<!-- <app-navbar></app-navbar>
 <br><br><br>
 <section id="contact">
     <div class="container">
@@ -10,23 +11,24 @@
          <img src="https://cdnassets.hw.net/0d/d0/79c6b00545c0ba4c25648c0fe1a6/e881b49e47ad4f1194ad384e49976c77.jpg" height="400px" width="500px">
         </div>
   
-
+        
         <div class="col-md-5">
             <h4 style="color: rgb(105, 109, 106);"><strong>BOOK YOUR DREAM VILLA/APPARTMENT</strong></h4><hr><br>
-          <form #f="ngForm" (ngSubmit)="addData(f)"> 
+          <form [formGroup]= "ThisForm" > 
             <div class="form-group">
-              <input type="text" class="form-control" name="name" value="" placeholder="Name" ngModel>
+              <input type="text" class="form-control"  value="" placeholder="Name" formControlName="Name">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" name="email" value="" placeholder="E-mail" ngModel>
+              <input type="email" class="form-control"  value="" placeholder="E-mail" formControlName=" Email">
             </div>
             <div class="form-group">
-              <input type="tel" class="form-control" name="phone" value="" placeholder="Phone" ngModel>
+              <input type="tel" class="form-control"  value="" placeholder="Phone" formControlName="Phone">
             </div>
             <div class="form-group">
-              <textarea class="form-control" name="message"  rows="3" placeholder="Message" ngModel></textarea>
-            </div><br><br>
-            <button class="btn btn-default" type="submit" name="button"  (click)="submit()" style="background-color: rgb(15, 180, 78);">
+              <input type="tel" class="form-control"  value="" placeholder="message" formControlName="Message">
+            </div>
+           
+            <button class="btn btn-default" type="submit" name="button"  (click)="addp()" style="background-color: rgb(15, 180, 78);">
                 <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
             </button>
           </form>
@@ -37,4 +39,96 @@
       </div>
     </div>
   </section>
+ -->
 
+<br><br><br><br>
+<div class="container">
+    <div class="title">
+        <h2>Booking Form</h2>
+    </div>
+  <div class="d-flex">
+    <form [formGroup]= "ThisForm">
+      <label>
+        <span class="fname"> Name <span class="required">*</span></span>
+        <input type="text"  formControlName="Name">
+      </label>
+      <label>
+        <span class="fname">Villa/Apartment<span class="required">*</span></span>
+        <input type="text"  formControlName="Villas">
+      </label>
+      <!-- <label>
+        <span class="lname">Last Name <span class="required">*</span></span>
+        <input type="text" name="lname">
+      </label> -->
+      <!-- <label>
+        <span>Company Name (Optional)</span>
+        <input type="text" formControlName="company">
+      </label> -->
+      <!-- <label>
+        <span>Villas/Apartment<span class="required">*</span></span>
+        <select formControlName="Villas">
+          <option value="select">Select a property</option>
+          <option value="AFG">4-Bedroom Villas</option>
+          <option value="ALA">3-Bedroom Villas</option>
+          <option value="ALB">Cozy Studio Apartment</option>
+          <option value="DZA">Gated communities</option>
+          <option value="ASM">8 Bedroom villa -1</option>
+          <option value="ASM">8 Bedroom villa -2</option>
+        </select>
+      </label> -->
+      <!-- <label>
+        <span>Street Address <span class="required">*</span></span>
+        <input type="text" name="houseadd" placeholder="House number and street name" required>
+      </label>
+      <label>
+        <span>&nbsp;</span>
+        <input type="text" name="apartment" placeholder="Apartment, suite, unit etc. (optional)">
+      </label> -->
+      <label>
+        <span>Town / City <span class="required">*</span></span>
+        <input type="text" formControlName="city"> 
+      </label>
+
+      <!-- <label>
+        <span>Postcode / ZIP <span class="required">*</span></span>
+        <input type="text" name="city"> 
+      </label> -->
+      <label>
+        <span>Phone <span class="required">*</span></span>
+        <input type="tel"formControlName="Phone"> 
+      </label>
+      <label>
+        <span>Email Address <span class="required">*</span></span>
+        <input type="email" formControlName="Email"> 
+      </label>
+    </form>
+    <div class="Yorder">
+      <table>
+        <tr>
+          <th colspan="2">www.myhomeinfo.com</th>
+        </tr>
+        <tr>
+          <td>LUXURY KERALA VILLAS</td>
+          <td>KERALA | PUNE | BANGALORE | CHENNAI</td>
+        </tr>
+        
+        <!-- <tr>
+          <td>Shipping</td>
+          <td>Free shipping</td>
+        </tr> -->
+      </table><br>
+      <!-- <div>
+        <input type="radio" name="dbt" value="dbt" checked> Direct Bank Transfer
+      </div>
+      <p>
+          Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+      </p>
+      <div>
+        <input type="radio" name="dbt" value="cd"> Cash on Delivery
+      </div> -->
+     
+      <button class="btn card_btn" style="background-color: green;"  class="hire" (click)="addp()">Confirm Booking</button>
+     
+    </div>
+   </div>
+  </div>

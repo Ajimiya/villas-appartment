@@ -11,7 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { VillasComponent } from './pages/villas/villas.component';
@@ -22,6 +22,13 @@ import { NavbarComponent } from './units/navbar/navbar.component';
 import { SinglepageComponent } from './pages/singlepage/singlepage.component';
 import { SingleapartmentComponent } from './pages/singleapartment/singleapartment.component';
 import { BookingComponent } from './pages/booking/booking.component';
+
+import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.component';
+import { ViewpropComponent } from './pages/viewprop/viewprop.component';
+
+import { CarrersComponent } from './pages/carrers/carrers.component';
+import { AdminmainComponent } from './adminpages/adminmain/adminmain.component';
+import { LogadminComponent } from './adminpages/logadmin/logadmin.component';
 
 
 @NgModule({
@@ -39,7 +46,14 @@ import { BookingComponent } from './pages/booking/booking.component';
     NavbarComponent,
     SinglepageComponent,
     SingleapartmentComponent,
-    BookingComponent
+    BookingComponent,
+    
+    ForgotpasswordComponent,
+    ViewpropComponent,
+   
+    CarrersComponent,
+    AdminmainComponent,
+    LogadminComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +62,8 @@ import { BookingComponent } from './pages/booking/booking.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   
 
   ],

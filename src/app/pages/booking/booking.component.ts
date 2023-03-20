@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import { HeroService } from 'src/app/hero.service';
 import { Firestore,collection,addDoc} from '@angular/fire/firestore';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/shared/auth.service';
 
 
 @Component({
@@ -10,22 +12,38 @@ import { Firestore,collection,addDoc} from '@angular/fire/firestore';
   styleUrls: ['./booking.component.css']
 })
 export class BookingComponent {
-  constructor(private router:Router,private hero:HeroService,private firestore : Firestore) {}
+  ThisForm!:FormGroup;
+  // fb: any;
+  // auth: any;
+  constructor(private fb:FormBuilder ,private router:Router,private auth:AuthService,private firestore : Firestore) {
 
-  submit(){
-    alert('Booked Sucessfully....We will reach you soon..')
-    this.router.navigateByUrl('homepage')
-  }
-
-  addData(f:any)
-  {
-     const collectionInstance = collection(this.firestore,'booking');
-    addDoc(collectionInstance,f.value).then(() =>{
-      console.log('Data Saved Sucessfully')
-    })
-    .catch((err)=>{
-      console.log(err); 
-    })
+ 
   
-  }
+    this.ThisForm=this.fb.group({
+    Name:['',[Validators.required]],
+    Email:['',[Validators.required]],
+    Phone:['',[Validators.required]],
+    Message:['',[Validators.required]],
+    
+  })
 }
+
+  addp(){
+    const detail = this.ThisForm.value;
+    console.log(detail);
+    this.auth.addp(detail).then((res: any)=>{
+      if(res){
+        alert('Submit Successfully')
+        this.ThisForm.reset();
+        this.router.navigate(['/'])
+      }
+      else{
+        console.log('Data Not Added ')
+      }
+    })
+}
+ 
+
+  
+}
+

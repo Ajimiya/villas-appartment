@@ -1,0 +1,168 @@
+<br /><br />
+<h2 style="color: rgb(11, 148, 148); text-align: center">WELCOME ADMIN</h2>
+<hr />
+<div class="col-auto">
+  <div class="bg-white border-radius-lg d-flex me-2">
+    <!-- <input type="text" class="form-control border-0 ps-3" placeholder="Type here..."> -->
+    <!-- <button class="btn bg-gradient-primary my-1 me-1">Search</button> -->
+  </div>
+</div>
+<!-- <button class="btn bg-gradient-primary my-1 me-1" (click)="logout()">logout</button> -->
+<a href="logadmin" type="button">Logout</a>
+<hr>
+<h2 style="text-align: center; color: rgb(22, 213, 108);">ABOUT US</h2><br><br>
+<section>
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-6">
+            <div class="about-box2 wow fadeInRight" data-wow-delay=".5s">
+                <div class="item-heading-left mb-bottom">
+                    <span class="section-subtitle" ><b></b></span>
+                    <h2 class="section-title"style="color:rgb(9, 190, 63);">APARTMENTS</h2>
+                    <!-- <div class="bg-title-wrap" style="display: block;">
+                        <span class="background-title solid">Who we are</span>
+                    </div> -->
+                </div>
+                <p>An apartment building or block of flats may have a few or many apartments. Each apartment is a separate room or set of rooms for people to live in. Sometimes an apartment will only be one small room, and tenants will have to share other rooms like the bathroom and kitchen. Other times, tenants will only share an entrance hallway with different doors leading to each apartment. This shared area is often cared for by a janitor or caretaker.
+                    An apartment, flat, or unit, is a self-contained housing unit that occupies part of a building, generally on a single story. There are many names for these overall buildings, see below.
+
+                </p>
+            
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="about-box1 wow fadeInLeft" data-wow-delay=".3s">
+                <div class="">
+                    <div class="motion-effects1">
+                        <img src="https://www.sobharealty.com/uploads/slider/apartments-main-banner_mobile.jpg" alt="shape" width="550" height="250px">
+                    </div>
+                    
+                </div>
+                                           
+            </div>
+        </div>
+    </div>
+</div>
+</section><br><br><br> 
+<section class="about-wrap1 motion-effects-wrap">
+    <div class="shape-img1">
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-box1 wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="">
+                        <div class="motion-effects1">
+                            <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/02/27121904/featured-compressed-67.jpg" alt="shape" width="550" height="380">
+                        </div>
+                        
+                    </div>
+                                               
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-box2 wow fadeInRight" data-wow-delay=".5s">
+                    <div class="item-heading-left mb-bottom">
+                        <!-- <span class="section-subtitle" style="color: rgb(1, 2, 2);"><b>About Us</b></span> -->
+                        <h2 class="section-title" style="color:rgb(9, 190, 63)">Luxury Kerala Villas</h2>
+                        <!-- <div class="bg-title-wrap" style="display: block;">
+                            <span class="background-title solid">Who we are</span>
+                        </div> -->
+                    </div>
+                    <p>Luxury Kerala Villas is the one and only company providing Self – catering Holiday Villas / Apartments in Kerala. All of our villas/apartments are managed by us. All of our villas/apartment is Government approved and the approval is granted by Homestay Classification Committee, Department of Tourism, Government of Kerala.
+                    </p>
+                    <p>Kerala is famed for its warm and welcoming people and for its beautiful beaches, lush backwaters, enticing cuisine and languid pace of life but the forested hills and narrow waterways can also be enjoyed by those seeking some gentle activity.</p>
+
+                    <!-- <div class="about-box-10">
+                       <div class="banner-button about-button-2">
+                        <a href="" class="banner-btn-info">View More</a>
+                    </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section><br><br><br>
+
+
+
+<h1 class="text-center pb-5 mt-3">CARRIER DETAILS</h1>
+<div class="container mt-3 pt-5">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone No</th>
+        <th scope="col">Qualification</th>
+
+        <th scope="col">Actions</th>
+        <!-- <th scope="col">Accept</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of details">
+        <th scope="row">1</th>
+        <td>{{ i.Name }}</td>
+        <td>{{ i.Email }}</td>
+        <td>{{ i.Phone }}</td>
+        <td>{{ i.Qualification }}</td>
+
+        <td>
+          <i class="bi bi-trash3-fill text-danger" (click)="delete(i.doc_id)"
+            >Delete</i
+          >
+        </td>
+        <!-- <td><i class="bi bi-check-circle-fill text-success"></i></td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- <button class="btn btn-danger my-10 me-10" (click)="logout()"href="home">logout</button> -->
+
+<div class="col-auto">
+  <div class="bg-white border-radius-lg d-flex me-2">
+    <!-- <input type="text" class="form-control border-0 ps-3" placeholder="Type here..."> -->
+    <!-- <button class="btn bg-gradient-primary my-1 me-1">Search</button> -->
+  </div>
+</div>
+<!-- <button class="btn bg-gradient-primary my-1 me-1" (click)="logout()">logout</button> -->
+
+<h1 class="text-center pb-5 mt-3">BOOKING DETAILS</h1>
+
+<div class="container mt-3 pt-5">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Villas/Apartment</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <!-- <th scope="col"></th> -->
+
+        <!-- <th scope="col">Action</th> -->
+        <!-- <th scope="col">Accept</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let j of detail">
+        <th scope="row">1</th>
+        <td>{{ j.Name }}</td>
+        <td>{{ j.Villas }}</td>
+        <td>{{ j.Phone }}</td>
+        <td>{{ j.Email }}</td>
+        <!-- <td>{{j.Message}}</td> -->
+
+        <!-- <td><i class="bi bi-trash3-fill text-danger" (click)="delete(j.doc_id1)">Delete</i></td> -->
+        <!-- <td><i class="bi bi-check-circle-fill text-success"></i></td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br><br>
+

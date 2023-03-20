@@ -1,0 +1,51 @@
+
+                                              LUXURY VILLAS & APARTMENTS
+                                               AJIMIYA A (MCA, S3)
+                                            ---MACFAST THRUVALLA , KERALA---
+
+ ------------------------------------------------------------------------------------------------------------------------------                                           
+
+
+admin--> admin email id : luxuryadmin@gmail.com
+         admin password : admin123
+
+         adminpages folder -->  adminlogin component , admin component
+
+         Functions: Admin Can Read & Delete Data from Booking And Carrers Pages that will be affected on firestore database also
+
+------------------------------------------------------------------------------------------------------------------------------
+
+users--> Pages Folder-->        aboutpage
+                                Carrers
+                                contactpage
+                                Villaspage
+                                Apartmentpage
+                                Registration
+                                User Login
+                                Booking
+                                forgot-password
+                                hero.servicepage
+                                auth.servicepage
+
+
+         Functions--------> user can view website ,autheticate, book villas & apartments, apply jobs , enquiry
+                          and etc...                   
+
+ ------------------------------------------------------------------------------------------------------------------------------
+
+ units folder--> NavbarComponent
+                 FooterComponent                                
+
+ ------------------------------------------------------------------------------------------------------------------------------
+
+ shared Folder-->  AuthService (For Authentication and Firestore Db Conn)
+
+ ------------------------------------------------------------------------------------------------------------------------------
+
+ Interface Folder--> details.ts [export data (crud)]
+                     newdetails.ts
+
+ ------------------------------------------------------------------------------------------------------------------------------    
+
+ assets------------> data.ts File
+ ------------------------------------------------------------------------------------------------------------------------------                            
